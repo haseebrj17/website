@@ -1,0 +1,4 @@
+---
+editLink: false
+aside: false
+---
