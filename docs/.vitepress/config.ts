@@ -24,6 +24,11 @@ export default defineConfigWithTheme<ThemeOptions>({
       alias: {
         '@playground': path.resolve(__dirname, 'playground'),
         '@shared': path.resolve(__dirname, 'shared'),
+        // Temporary fix for Safari / Select scrolling on mobile
+        'body-scroll-lock': path.resolve(
+          __dirname,
+          'shared/utils/body-scroll-lock.ts'
+        ),
       },
     },
   },

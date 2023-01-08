@@ -10,8 +10,8 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@dicebear/collection": "^5.0.0",
-    "@dicebear/core": "^5.0.0",
+    "@dicebear/collection": "^5.0.2",
+    "@dicebear/core": "^5.0.2",
     "@mdi/js": "^7.1.96",
     "@types/canvas-confetti": "^1.6.0",
     "@types/json-schema": "^7.0.11",
