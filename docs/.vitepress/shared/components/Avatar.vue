@@ -33,7 +33,7 @@ const svg = computedAsync(() => {
 
 <template>
   <div class="avatar">
-    <img :src="svg" v-if="svg" alt="avatar preview" />
+    <img :src="svg" v-if="svg" alt="avatar preview" loading="lazy" />
   </div>
 </template>
 

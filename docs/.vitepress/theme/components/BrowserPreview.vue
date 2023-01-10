@@ -18,7 +18,7 @@ defineProps<{
     </div>
     <div class="browser-body">
       <a :href="url" target="_blank" rel="noopener" class="browser-body-anchor">
-        <img :src="url" width="94" heigt="94" alt="preview" />
+        <img :src="url" width="94" heigt="94" alt="preview" loading="lazy" />
       </a>
     </div>
   </div>
