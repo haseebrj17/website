@@ -37,7 +37,7 @@
     "vitepress": "1.0.0-alpha.35",
     "vue": "^3.2.45",
     "vue-confetti": "^2.3.0",
-    "vuetify": "^3.1.0"
+    "vuetify": "^3.1.1"
   },
   "pnpm": {
     "peerDependencyRules": {

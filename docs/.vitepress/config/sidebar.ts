@@ -50,6 +50,10 @@ const sidebar: DefaultTheme.SidebarGroup[] = [
         link: '/guides/create-an-avatar-style-with-figma',
       },
       {
+        text: 'Use the HTTP-API as Gravatar default image',
+        link: '/guides/use-the-http-api-as-gravatar-default-image',
+      },
+      {
         text: 'Use the library without tree shaking',
         link: '/guides/use-the-library-without-tree-shaking',
       },
