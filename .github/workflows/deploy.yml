@@ -59,7 +59,7 @@ jobs:
           username: ${{ env.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./docs/.vitepress/dist/
-          server-dir: /dicebear-avatars/
+          state-name: /.ftp-deploy-sync-state.json
 
       - name: Purge CDN Cache
         run: |
