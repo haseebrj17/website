@@ -60,8 +60,7 @@ use the [Pixel Art](/styles/pixel-art) avatar style.
 
 ### Boolean options
 
-Boolean values can be set as strings (`true` and `false`) or as numeric values
-(`1` and `0`).
+Boolean values can be set as strings (`true` and `false`).
 
 <BrowserPreview url="https://api.dicebear.com/5.x/lorelei/svg?flip=true" />
 <BrowserPreview url="https://api.dicebear.com/5.x/lorelei/svg?flip=false" />
