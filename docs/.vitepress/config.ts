@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { defineConfigWithTheme } from 'vitepress';
+import { defineConfigWithTheme, HeadConfig } from 'vitepress';
 import { ThemeOptions } from '@shared/types';
 import sidebar from './config/sidebar';
 import avatarStyles from './config/avatarStyles';
@@ -11,6 +11,23 @@ export default defineConfigWithTheme<ThemeOptions>({
     'With DiceBear you can create awesome avatars for your project in no time.',
   cleanUrls: 'with-subfolders',
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  transformHead: (ctx) => {
+    const result: HeadConfig[] = [];
+
+    if (ctx.pageData.relativePath) {
+      const canonicalPath =
+        ctx.pageData.relativePath === 'index.md'
+          ? ''
+          : ctx.pageData.relativePath.replace(/\.md$/, '');
+
+      result.push([
+        'link',
+        { rel: 'canonical', href: `https://dicebear.com/${canonicalPath}` },
+      ]);
+    }
+
+    return result;
+  },
   vite: {
     plugins: [
       vuetify({
