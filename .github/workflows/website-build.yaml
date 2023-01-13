@@ -15,6 +15,7 @@ on:
 
 env:
   DEPLOYMENT_FOLDER: docs/.vitepress/dist
+  CDN_PULL_ZONE: 147563
 
 jobs:
 # Please do not rename this job
@@ -77,3 +78,9 @@ jobs:
           folder: ${{ env.DEPLOYMENT_FOLDER }}
           config-file: .deploy-now/website/config.yaml
           action: upload
+
+      - name: Purge CDN Cache
+        run: |
+          curl --request POST \
+            --url https://api.bunny.net/pullzone/${{ env.CDN_PULL_ZONE }}/purgeCache \
+            --header 'AccessKey: ${{ secrets.CDN_ACCESS_KEY }}'
