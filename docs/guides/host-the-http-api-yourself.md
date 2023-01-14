@@ -123,10 +123,6 @@ Enable the version 4.10 endpoint. Defaults to `1` (true).
 
 Enable the version 5.0 endpoint. Defaults to `1` (true).
 
-### CACHE_CONTROL_STATS
-
-Cache duration for the stats endpoint in seconds. Defaults to `3600` (1 hour).
-
 ### CACHE_CONTROL_AVATARS
 
 Cache duration for the avatars endpoint in seconds. Defaults to `31536000` (1
