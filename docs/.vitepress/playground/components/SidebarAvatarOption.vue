@@ -125,6 +125,13 @@ const options = computed(() => {
     }
   }
 
+  if (props.field.toString().match(/Color$/)) {
+    result.set('transparent', {
+      value: 'transparent',
+      label: 'transparent',
+    });
+  }
+
   return Array.from(result.values()).sort((a, b) => {
     if (typeof a.value === 'number' && typeof b.value === 'number') {
       return a.value - b.value;

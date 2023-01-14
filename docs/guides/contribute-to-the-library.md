@@ -111,10 +111,9 @@ to create a Pull Request.
 
 Usually the official avatar styles were created with our
 [Figma Exporter](/guides/create-an-avatar-style-with-figma) plugin. You can find
-the Figma source files in the
-[SOURCES.md](https://github.com/dicebear/dicebear/blob/main/SOURCES.md) file. So
-if you want to customize an avatar style, it's best to do the customization
-directly in Figma.
+the Figma source files in the `src/index.ts` file of the respective avatar
+style. So if you want to customize an avatar style, it's best to do the
+customization directly in Figma.
 
 In order to edit the files in Figma, you must
 [duplicate](https://help.figma.com/hc/en-us/articles/360038511533-Duplicate-files)
