@@ -14,7 +14,7 @@ const props = defineProps<{
   value: JSONSchema7;
 }>();
 
-const valueTab = ref<'examples' | 'possible' | 'defaults'>();
+const valueTab = ref<'examples' | 'possible' | 'default'>();
 const exampleTab = ref<'http-api' | 'js-library' | 'cli'>();
 
 const defaultValue = computed(() => {
@@ -30,6 +30,18 @@ const possibleValues = computed(() => {
 
   if (typeof items === 'object' && 'enum' in items && items.enum) {
     return items.enum
+      .filter((v) => {
+        return (
+          typeof v === 'string' ||
+          typeof v === 'number' ||
+          typeof v === 'boolean'
+        );
+      })
+      .sort() as (string | number | boolean)[];
+  }
+
+  if (props.value.enum) {
+    return props.value.enum
       .filter((v) => {
         return (
           typeof v === 'string' ||
@@ -175,7 +187,7 @@ const headerId = computed(() => {
       <v-tab value="values" v-if="possibleValues.length > 0"
         >Possible Values</v-tab
       >
-      <v-tab value="defaults" v-if="defaultValue !== undefined">Defaults</v-tab>
+      <v-tab value="default" v-if="defaultValue !== undefined">Default</v-tab>
     </v-tabs>
 
     <v-card-text>
@@ -202,7 +214,7 @@ const headerId = computed(() => {
             />
           </div>
         </v-window-item>
-        <v-window-item value="defaults" v-if="defaultValue !== undefined">
+        <v-window-item value="default" v-if="defaultValue !== undefined">
           <div class="row-preview">
             <StyleOptionsPreview
               v-if="Array.isArray(defaultValue)"

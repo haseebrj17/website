@@ -86,6 +86,21 @@ const options = computed(() => {
     }
   }
 
+  if (props.schema.enum) {
+    for (const value of props.schema.enum) {
+      if (
+        typeof value === 'string' ||
+        typeof value === 'number' ||
+        typeof value === 'boolean'
+      ) {
+        result.set(value, {
+          value: value,
+          label: `${value}${suffix.value}`,
+        });
+      }
+    }
+  }
+
   if (props.schema.default) {
     if (Array.isArray(props.schema.default)) {
       for (const value of props.schema.default) {
