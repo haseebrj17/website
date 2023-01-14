@@ -1,3 +1,9 @@
+---
+description: >
+  See how you can create avatars with the DiceBear CLI. It's free and supports
+  all official avatar styles.
+---
+
 # CLI
 
 With the CLI you can create thousands of avatars in no time!

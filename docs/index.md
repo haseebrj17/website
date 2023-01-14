@@ -1,5 +1,10 @@
 ---
 layout: home
+title: DiceBear
+titleTemplate: Open Source Avatar Library
+description: >
+  The avatar library you've always been looking for. Create avatars for your
+  profiles, designs, websites or apps. Piece by piece or based on a seed.
 hero:
   name: DiceBear
   text: The avatar library you've always been looking for.

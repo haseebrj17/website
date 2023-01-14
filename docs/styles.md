@@ -1,3 +1,9 @@
+---
+description: >
+  Get an overview of all available avatar styles from DiceBear. From abstract
+  patterns, to loving characters, it's all there!
+---
+
 <script setup lang="ts">
 import StyleList from "@theme/components/StyleList.vue";
 </script>

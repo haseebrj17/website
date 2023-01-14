@@ -1,6 +1,8 @@
 ---
 editLink: false
 aside: false
+
+description: Get an overview of the licenses used at DiceBear.
 ---
 
 <script setup lang="ts">

@@ -1,3 +1,9 @@
+---
+description: >
+  Our HTTP API is probably the easiest way to use DiceBear. Learn how to create
+  avatars for your project using the HTTP API. It's free!
+---
+
 <script setup>
 import BrowserPreview from '@theme/components/BrowserPreview.vue';
 </script>

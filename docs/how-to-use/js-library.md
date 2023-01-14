@@ -1,3 +1,9 @@
+---
+description: >
+  Learn how to use the DiceBear JavaScript library in your project to create
+  avatars. Works in the browser and in Node.js!
+---
+
 # JS-Library
 
 The library is written in [TypeScript](https://www.typescriptlang.org/) /
