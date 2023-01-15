@@ -5,6 +5,8 @@
 
 echo "Download legal pages"
 
+pwd
+
 curl \
   -H "Accept: application/vnd.github.raw" \
   -H "Authorization: Bearer ${PAT}"\
