@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs",
-    "preinstall": "npx only-allow pnpm"
+    "preview": "vitepress preview docs"
   },
   "dependencies": {
     "@dicebear/collection": "^5.0.4",
@@ -38,16 +37,5 @@
     "vue": "^3.2.45",
     "vue-confetti": "^2.3.0",
     "vuetify": "^3.1.1"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@algolia/client-search",
-        "react",
-        "react-dom",
-        "@types/react",
-        "vite"
-      ]
-    }
   }
 }

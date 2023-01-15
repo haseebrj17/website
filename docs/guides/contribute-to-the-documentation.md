@@ -12,9 +12,8 @@ below each page.
 - A GitHub account
 - Git installed (Learn how to install Git
   [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
-- Node.js and PNPM installed (Learn how to install
-  [Node.js](https://nodejs.org/en/download/) and
-  [PNPM](https://pnpm.io/installation))
+- Node.js and NPM installed (Learn how to install
+  [Node.js](https://nodejs.org/en/download/)
 
 ## Set up website locally
 
@@ -37,13 +36,13 @@ below each page.
 
    ```
    cd website
-   pnpm install
+   npm install
    ```
 
 4. Create a build:
 
    ```
-   pnpm build
+   npm build
    ```
 
 ## Verifying your changes
@@ -52,7 +51,7 @@ You can start the website locally on your computer with the following command to
 check your changes:
 
 ```
-pnpm dev
+npm dev
 ```
 
 Open `http://localhost:5173/` in your browser to see your changes.
