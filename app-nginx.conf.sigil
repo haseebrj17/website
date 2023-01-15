@@ -19,17 +19,14 @@ http {
     {{ else }}
       root /app/www;
     {{ end }}
-    index index.html;
     port_in_redirect off;
     absolute_redirect off;
     error_page 404 /404.html;
 
-    location / {
-      {{ if ne $.NGINX_DEFAULT_REQUEST "" }}
-        try_files $uri $uri/ /{{ $.NGINX_DEFAULT_REQUEST }};
-      {{ else }}
-        try_files $uri $uri/ =404;
-      {{ end }}
-    }
+    rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent;
+    rewrite ^/(.*)/$ /$1 permanent;
+
+    index index.html;
+    try_files $uri/index.html $uri.html $uri/ $uri =404;
   }
 }
