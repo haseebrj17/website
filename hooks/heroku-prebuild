@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Makes use of the dokku-build-hook plugin
-# https://github.com/fteychene/dokku-build-hook
-
 echo "Download legal pages"
 
 pwd

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
+    "heroku-prebuild": "./hooks/heroku-prebuild",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
