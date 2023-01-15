@@ -73,8 +73,8 @@ Boolean values can be set as strings (`true` and `false`).
 
 ## File format
 
-The API supports SVG, PNG and JPG. **We recommend using SVG if possible!** SVG
-is the more modern format, scales indefinitely, and requires less traffic.
+The API supports SVG, PNG, JPG and JSON. **We recommend using SVG if possible!**
+SVG is the more modern format, scales indefinitely, and requires less traffic.
 Because the PNG and JPG formats put more load on the API, the size is limited to
 256x256.
 
@@ -86,8 +86,8 @@ Because the PNG and JPG formats put more load on the API, the size is limited to
 
 You can set the version in the URL to be guaranteed to have an identical avatar
 even after updates. Just replace the `5.x` from the previous examples with the
-one you want. Currently supported: `5.x`, `5.0`, `4.x`, `4.10`, `4.9`, `4.8`,
-`4.7`, `4.6`, `4.5` and `4.4`.
+one you want. Currently supported: `5.x`, `5.1`, `5.0`, `4.x`, `4.10`, `4.9`,
+`4.8`, `4.7`, `4.6`, `4.5` and `4.4`.
 
 <BrowserPreview url="https://api.dicebear.com/5.0/bottts/svg" />
 <BrowserPreview url="https://api.dicebear.com/4.10/bottts/svg" />

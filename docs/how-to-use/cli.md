@@ -77,9 +77,10 @@ the options provided by the avatar styles, there are the following additional
 options:
 
 ```
---count   Defines how many avatars to create.  [number] [default: 1]
---format                                       [string] [choices: "svg", "png", "jpg", "jpeg"] [default: "svg"]
---exif    Include Exif Metadata                [boolean] [default: false]
+--count      Defines how many avatars to create.          [number]
+--format                                                  [string] [choices: "svg", "png", "jpg", "jpeg", "json"]
+--exif       Include Exif Metadata                        [boolean]
+--json       Save JSON file in addition to image file     [boolean]
 ```
 
 As you can see, you can also create the avatars in a format other than SVG. For

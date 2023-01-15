@@ -107,6 +107,24 @@ const avatar = createAvatar(lorelei, {
 const svg = avatar.toString(); // [!code focus]
 ```
 
+### `.toJson()`
+
+**Return type:** `{ svg: string, extra: Record<string, unknown> }`
+
+Returns a JSON with the SVG and additional information, such as the actual
+options used.
+
+```js
+import { createAvatar } from '@dicebear/core';
+import { lorelei } from '@dicebear/collection';
+
+const avatar = createAvatar(lorelei, {
+  // ... options
+});
+
+const json = avatar.toJson(); // [!code focus]
+```
+
 ### `.toDataUri()`
 
 **Return type:** `Promise<string>`
