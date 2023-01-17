@@ -53,6 +53,8 @@ function onOpen() {
 function onClose() {
   open.value = false;
 }
+
+const touchless = { left: () => {}, right: () => {} };
 </script>
 
 <template>
@@ -106,7 +108,7 @@ function onClose() {
           <v-tab value="cli">CLI</v-tab>
         </v-tabs>
 
-        <v-window v-model="tab">
+        <v-window v-model="tab" :touch="touchless">
           <v-window-item value="http-api">
             <p>Use this URL to request this avatar style via our HTTP API.</p>
             <Code :code="exampleHttpApi" />

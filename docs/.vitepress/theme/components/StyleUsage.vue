@@ -44,6 +44,8 @@ const exampleCliInstall = computed(() => {
 const exampleCliUsage = computed(() => {
   return `dicebear ${props.styleName}`;
 });
+
+const touchless = { left: () => {}, right: () => {} };
 </script>
 
 <template>
@@ -55,7 +57,7 @@ const exampleCliUsage = computed(() => {
     </v-tabs>
 
     <v-card-text>
-      <v-window v-model="tab">
+      <v-window v-model="tab" :touch="touchless">
         <v-window-item value="http-api" class="usage-card-body">
           <p>Use this URL to request this avatar style via our HTTP API.</p>
           <Code :code="exampleHttpApiUrl" />

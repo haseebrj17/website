@@ -146,6 +146,8 @@ const exampleCli = computed(() => {
 const headerId = computed(() => {
   return `options-${props.name.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
 });
+
+const touchless = { left: () => {}, right: () => {} };
 </script>
 
 <template>
@@ -191,7 +193,7 @@ const headerId = computed(() => {
     </v-tabs>
 
     <v-card-text>
-      <v-window v-model="valueTab">
+      <v-window v-model="valueTab" :touch="touchless">
         <v-window-item value="examples" v-if="examples !== undefined">
           <div class="row-preview">
             <StyleOptionsPreview
@@ -244,7 +246,7 @@ const headerId = computed(() => {
     </v-tabs>
 
     <v-card-text>
-      <v-window v-model="exampleTab">
+      <v-window v-model="exampleTab" :touch="touchless">
         <v-window-item value="http-api">
           <Code class="row-code" :code="exampleHttpApi" />
         </v-window-item>
