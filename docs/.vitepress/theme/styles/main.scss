@@ -1,11 +1,16 @@
 :root {
+  --vp-c-text-light-1: rgba(60, 60, 67, 1);
+
   --vp-sidebar-width: 300px;
-  --vp-c-brand-lighter: #45a1d6;
-  --vp-c-brand-light: #2d95d1;
+
   --vp-c-brand: #1689cc;
+  --vp-c-brand-light: #2d95d1;
+  --vp-c-brand-lighter: #45a1d6;
   --vp-c-brand-dark: #147bb8;
   --vp-c-brand-darker: #126ea3;
+
   --vp-code-block-color: rgb(166, 172, 205);
+
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
