@@ -93,7 +93,7 @@ const properties = computed(() => {
 
       &.v-field--focused,
       &:hover {
-        --v-theme-surface: 49, 49, 54 !important;
+        --v-theme-surface: 50, 50, 50 !important;
       }
     }
   }

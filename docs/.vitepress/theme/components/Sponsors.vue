@@ -13,7 +13,7 @@ import { withBase } from 'vitepress';
 
 <style>
 :root {
-  --sponsors-background-color-hover: #d7d7d8;
+  --sponsors-background-color-hover: #d7d7d7;
 }
 
 .dark {
