@@ -1,4 +1,5 @@
 :root {
+  --vp-c-border: var(--vp-c-divider);
   --vp-c-text-light-1: rgba(60, 60, 67, 1);
 
   --vp-sidebar-width: 300px;
@@ -17,6 +18,8 @@
     var(--vp-c-brand),
     var(--vp-c-brand-lighter)
   );
+
+  --v-theme-overlay-multiplier: .95;
 }
 
 .v-field__prepend-inner, .v-field__append-inner {

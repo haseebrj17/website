@@ -40,12 +40,12 @@ const svg = computedAsync(() => {
 <style>
 :root {
   --avatar-background-color-1: rgba(0, 0, 0, 0.02);
-  --avatar-background-color-2: rgba(0, 0, 0, 0.08);
+  --avatar-background-color-2: rgba(0, 0, 0, 0.07);
 }
 
 .dark {
   --avatar-background-color-1: rgba(255, 255, 255, 0.02);
-  --avatar-background-color-2: rgba(255, 255, 255, 0.08);
+  --avatar-background-color-2: rgba(255, 255, 255, 0.07);
 }
 </style>
 
