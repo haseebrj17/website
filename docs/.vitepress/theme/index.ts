@@ -28,8 +28,8 @@ export default {
             dark: false,
             colors: {
               primary: '#1689cc',
-              secondary: '#E4E7E9',
-              surface: '#f9f9f9',
+              secondary: '#E2E2E2',
+              surface: '#F9F9F9',
             },
             variables: {
               'activated-opacity': 0.08,

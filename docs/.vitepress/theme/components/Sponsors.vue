@@ -11,6 +11,16 @@ import { withBase } from 'vitepress';
   </div>
 </template>
 
+<style>
+:root {
+  --sponsors-background-color-hover: #d7d7d7;
+}
+
+.dark {
+  --sponsors-background-color-hover: #ffffff;
+}
+</style>
+
 <style scoped lang="scss">
 .headline {
   color: var(--vp-c-text-3);
@@ -37,7 +47,7 @@ import { withBase } from 'vitepress';
       height: 48px;
     }
     &:hover {
-      background-color: var(--vp-c-white-mute);
+      background-color: var(--sponsors-background-color-hover);
       img {
         filter: none;
       }

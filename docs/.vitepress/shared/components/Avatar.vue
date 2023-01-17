@@ -37,14 +37,26 @@ const svg = computedAsync(() => {
   </div>
 </template>
 
+<style>
+:root {
+  --avatar-background-color-1: rgba(0, 0, 0, 0.02);
+  --avatar-background-color-2: rgba(0, 0, 0, 0.07);
+}
+
+.dark {
+  --avatar-background-color-1: rgba(255, 255, 255, 0.02);
+  --avatar-background-color-2: rgba(255, 255, 255, 0.07);
+}
+</style>
+
 <style scoped>
 .avatar {
   width: calc(v-bind(size) * 1px);
   height: calc(v-bind(size) * 1px);
   border-radius: 3px;
   background: repeating-conic-gradient(
-      var(--vp-c-bg-soft) 0% 25%,
-      var(--vp-c-bg-mute) 0% 50%
+      var(--avatar-background-color-1) 0% 25%,
+      var(--avatar-background-color-2) 0% 50%
     )
     50% / 12px 12px;
   line-height: 0;
