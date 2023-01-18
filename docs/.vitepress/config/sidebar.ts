@@ -66,6 +66,10 @@ const sidebar: DefaultTheme.SidebarGroup[] = [
         link: '/guides/use-the-library-with-react',
       },
       {
+        text: 'Use the library with React Native',
+        link: '/guides/use-the-library-with-react-native',
+      },
+      {
         text: 'Use the library with Svelte',
         link: '/guides/use-the-library-with-svelte',
       },
