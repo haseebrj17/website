@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import type { JSONSchema7 } from 'json-schema';
+import type { JSONSchema7, JSONSchema7Type } from 'json-schema';
 import { computed, ref } from 'vue';
 import { AvatarStyle } from '@shared/types';
 import Code from '@shared/components/Code.vue';
 import StyleOptionsPreview from './StyleOptionsPreview.vue';
 import StyleOptionsTag from './StyleOptionsTag.vue';
 import { getAvatarApiUrl } from '@shared/utils/avatar';
+import natsort from 'natsort';
 
 const props = defineProps<{
   style: AvatarStyle;
@@ -17,9 +18,17 @@ const props = defineProps<{
 const valueTab = ref<'examples' | 'possible' | 'default'>();
 const exampleTab = ref<'http-api' | 'js-library' | 'cli'>();
 
+const reduce = (v: JSONSchema7Type) => {
+  if (typeof v === 'string' || typeof v === 'number') {
+    return v;
+  }
+
+  return v ? 'true' : 'false';
+};
+
 const defaultValue = computed(() => {
   if (Array.isArray(props.value.default)) {
-    return props.value.default.sort();
+    return props.value.default.map(reduce).sort(natsort());
   }
 
   return props.value.default;
@@ -37,7 +46,8 @@ const possibleValues = computed(() => {
           typeof v === 'boolean'
         );
       })
-      .sort() as (string | number | boolean)[];
+      .map(reduce)
+      .sort(natsort()) as (string | number | boolean)[];
   }
 
   if (props.value.enum) {
@@ -49,7 +59,8 @@ const possibleValues = computed(() => {
           typeof v === 'boolean'
         );
       })
-      .sort() as (string | number | boolean)[];
+      .map(reduce)
+      .sort(natsort()) as (string | number | boolean)[];
   }
 
   return [];

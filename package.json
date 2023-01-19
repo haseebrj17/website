@@ -27,6 +27,7 @@
     "highlight.js": "^11.7.0",
     "json-schema-merge-allof": "^0.8.1",
     "lodash": "^4.17.21",
+    "natsort": "^2.0.3",
     "pinia": "^2.0.28",
     "prando": "^6.0.1",
     "random-int": "^3.0.0",

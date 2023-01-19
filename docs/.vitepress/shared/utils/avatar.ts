@@ -83,6 +83,21 @@ export function getAvatarPropertyPreviewOptions(
     };
   }
 
+  if (propertyName === 'backgroundType') {
+    return {
+      backgroundColor: ['6d28d9', 'c026d3'],
+      [propertyName]: [propertyValue],
+    };
+  }
+
+  if (propertyName === 'backgroundRotation') {
+    return {
+      backgroundColor: ['3f3f46', 'd4d4d8'],
+      backgroundType: ['gradientLinear'],
+      [propertyName]: [propertyValue],
+    };
+  }
+
   if (propertyName.match(/Color$/)) {
     const probabilityName = propertyName.replace(/Color$/, 'Probability');
 
