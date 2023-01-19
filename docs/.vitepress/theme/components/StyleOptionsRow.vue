@@ -6,7 +6,6 @@ import Code from '@shared/components/Code.vue';
 import StyleOptionsPreview from './StyleOptionsPreview.vue';
 import StyleOptionsTag from './StyleOptionsTag.vue';
 import { getAvatarApiUrl } from '@shared/utils/avatar';
-import natsort from 'natsort';
 
 const props = defineProps<{
   style: AvatarStyle;
@@ -14,6 +13,13 @@ const props = defineProps<{
   name: string;
   value: JSONSchema7;
 }>();
+
+const naturalSort = (a: string | number, b: string | number) => {
+  return a.toString().localeCompare(b.toString(), undefined, {
+    numeric: true,
+    sensitivity: 'base',
+  });
+};
 
 const valueTab = ref<'examples' | 'possible' | 'default'>();
 const exampleTab = ref<'http-api' | 'js-library' | 'cli'>();
@@ -28,7 +34,7 @@ const reduce = (v: JSONSchema7Type) => {
 
 const defaultValue = computed(() => {
   if (Array.isArray(props.value.default)) {
-    return props.value.default.map(reduce).sort(natsort());
+    return props.value.default.map(reduce).sort(naturalSort);
   }
 
   return props.value.default;
@@ -47,7 +53,7 @@ const possibleValues = computed(() => {
         );
       })
       .map(reduce)
-      .sort(natsort()) as (string | number | boolean)[];
+      .sort(naturalSort) as (string | number | boolean)[];
   }
 
   if (props.value.enum) {
@@ -60,7 +66,7 @@ const possibleValues = computed(() => {
         );
       })
       .map(reduce)
-      .sort(natsort()) as (string | number | boolean)[];
+      .sort(naturalSort) as (string | number | boolean)[];
   }
 
   return [];
