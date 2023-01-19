@@ -26,7 +26,7 @@ const suffix = computed(() => {
       ['%', field === 'scale'],
       ['%', field.match(/^translate/)],
       ['%', field === 'radius'],
-      ['°', field === 'rotate'],
+      ['°', field === 'rotate' || field === 'backgroundRotation'],
       ['', true],
     ].find(([, match]) => match)?.[0] ?? ''
   );
@@ -53,13 +53,20 @@ const options = computed(() => {
   }
 
   if (props.schema.type === 'integer') {
-    const step = props.field.toString().match(/Probability$/) ? 5 : 10;
+    const minimum = props.schema.minimum || 0;
+    const maximum = props.schema.maximum || 100;
 
-    for (
-      let i = props.schema.minimum || 0;
-      i <= (props.schema.maximum || 100);
-      i += step
-    ) {
+    let step = 10;
+
+    if (maximum <= 100) {
+      step = 5;
+    }
+
+    if (maximum <= 10) {
+      step = 1;
+    }
+
+    for (let i = minimum; i <= maximum; i += step) {
       result.set(i, {
         value: i,
         label: `${i}${suffix.value}`,
