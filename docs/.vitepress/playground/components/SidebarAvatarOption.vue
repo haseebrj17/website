@@ -17,6 +17,14 @@ const label = computed(() => {
   return capitalCase(props.field.toString());
 });
 
+const hint = computed(() => {
+  if (props.field === 'backgroundRotation') {
+    return 'The PRNG generates a number between the smallest and largest value.';
+  }
+
+  return undefined;
+});
+
 const suffix = computed(() => {
   const field = props.field.toString();
 
@@ -108,6 +116,32 @@ const options = computed(() => {
     }
   }
 
+  if (
+    typeof props.schema.items === 'object' &&
+    'type' in props.schema.items &&
+    props.schema.items.type === 'integer'
+  ) {
+    const minimum = props.schema.items.minimum || 0;
+    const maximum = props.schema.items.maximum || 100;
+
+    let step = 10;
+
+    if (maximum <= 100) {
+      step = 5;
+    }
+
+    if (maximum <= 10) {
+      step = 1;
+    }
+
+    for (let i = minimum; i <= maximum; i += step) {
+      result.set(i, {
+        value: i,
+        label: `${i}${suffix.value}`,
+      });
+    }
+  }
+
   if (props.schema.default) {
     if (Array.isArray(props.schema.default)) {
       for (const value of props.schema.default) {
@@ -181,7 +215,9 @@ const multiple = computed(() => {
       item-title="label"
       item-value="value"
       v-model="store.avatarStyleOptions[props.field]"
-      :hide-details="true"
+      :hide-details="!hint"
+      :hint="hint"
+      persistent-hint
       variant="solo"
       :multiple="multiple"
       :clearable="multiple"

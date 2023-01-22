@@ -10,8 +10,8 @@
     "preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@dicebear/collection": "^5.1.3",
-    "@dicebear/core": "^5.1.3",
+    "@dicebear/collection": "^5.1.4",
+    "@dicebear/core": "^5.1.4",
     "@mdi/js": "^7.1.96",
     "@types/canvas-confetti": "^1.6.0",
     "@types/json-schema": "^7.0.11",

@@ -200,6 +200,13 @@ const touchless = { left: () => {}, right: () => {} };
     >. With the PRNG you can create the same avatar over and over again based.
   </p>
 
+  <p v-if="name === 'backgroundRotation'">
+    Specify an array of two numbers for this option. The PRNG will generate a
+    number between the two values, which will be used as the rotation degree.
+    The rotation is only visible if <code>backgroundType</code> is set to
+    <code>['gradientLinear']</code>.
+  </p>
+
   <v-card class="row-card" variant="flat">
     <v-tabs v-model="valueTab" bg-color="secondary">
       <v-tab value="examples" v-if="examples !== undefined">Examples</v-tab>
