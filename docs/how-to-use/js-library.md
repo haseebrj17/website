@@ -142,6 +142,24 @@ const avatar = createAvatar(lorelei, {
 const dataUri = await avatar.toDataUri(); // [!code focus]
 ```
 
+### `.toDataUriSync()`
+
+**Return type:** `string`
+
+Returns the avatar as [data uri](https://en.wikipedia.org/wiki/Data_URI_scheme).
+Same as `.toDataUri()` but synchronous.
+
+```js
+import { createAvatar } from '@dicebear/core';
+import { lorelei } from '@dicebear/collection';
+
+const avatar = createAvatar(lorelei, {
+  // ... options
+});
+
+const dataUri = avatar.toDataUriSync(); // [!code focus]
+```
+
 ### `.toFile(name)` {#tofile}
 
 **Return type:** `Promise<void>`

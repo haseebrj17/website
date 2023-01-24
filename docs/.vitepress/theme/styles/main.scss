@@ -58,7 +58,9 @@
     'open-peeps',
     'personas',
     'pixel-art',
-    'pixel-art-neutral'
+    'pixel-art-neutral',
+    'shapes',
+    'thumbs'
   );
 
   @each $style in $styles {

@@ -189,6 +189,11 @@ const touchless = { left: () => {}, right: () => {} };
     :value="itemPattern"
     v-if="itemPattern !== undefined"
   />
+  <StyleOptionsTag
+    name="Max Items"
+    :value="value.maxItems"
+    v-if="value.maxItems !== undefined"
+  />
 
   <p v-if="name === 'seed'">
     The seed determines the initial value for the built-in
@@ -205,6 +210,16 @@ const touchless = { left: () => {}, right: () => {} };
     number between the two values, which will be used as the rotation degree.
     The rotation is only visible if <code>backgroundType</code> is set to
     <code>['gradientLinear']</code>.
+  </p>
+
+  <p v-if="name !== 'backgroundRotation' && name.endsWith('Rotation')">
+    Specify an array of two numbers for this option. The PRNG will generate a
+    number between the two values, which will be used as the rotation degree.
+  </p>
+
+  <p v-if="name.endsWith('OffsetX') || name.endsWith('OffsetY')">
+    Specify an array of two numbers for this option. The PRNG will generate a
+    number between the two values, which will be used as offset.
   </p>
 
   <v-card class="row-card" variant="flat">

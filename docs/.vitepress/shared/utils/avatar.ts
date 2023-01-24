@@ -115,6 +115,17 @@ export function getAvatarPropertyPreviewOptions(
     };
   }
 
+  if (
+    propertyName.match(/OffsetX$/) ||
+    propertyName.match(/OffsetY$/) ||
+    propertyName.match(/Rotation$/)
+  ) {
+    return {
+      seed: 'JD',
+      [propertyName]: [propertyValue],
+    };
+  }
+
   return {
     seed: 'JD',
     [`${propertyName}Probability`]: 100,

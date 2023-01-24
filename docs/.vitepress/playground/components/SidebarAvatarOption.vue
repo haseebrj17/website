@@ -204,10 +204,14 @@ const options = computed(() => {
 const multiple = computed(() => {
   return props.schema.type === 'array';
 });
+
+const isLimited = computed(() => {
+  return !!props.schema.maxItems;
+});
 </script>
 
 <template>
-  <template v-if="options.length > 1">
+  <template v-if="options.length > 1 && !isLimited">
     <v-label class="mb-2" :for="field">{{ label }}</v-label>
     <v-select
       :id="field.toString()"
