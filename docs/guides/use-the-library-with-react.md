@@ -9,8 +9,6 @@ import { createAvatar } from '@dicebear/core';
 import { lorelei } from '@dicebear/collection';
 
 function App() {
-  const [avatar, setAvatar] = useState(null);
-
   const avatar = useMemo(() => {
     return createAvatar(lorelei, {
       size: 128,
