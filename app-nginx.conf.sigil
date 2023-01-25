@@ -24,8 +24,20 @@ http {
     proxy_intercept_errors on;
     error_page 404 /404.html;
 
-    rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent;
+    location = /404.html {
+      internal;
+    }
+
     rewrite ^/(.*)/$ /$1 permanent;
+
+    rewrite ^/integrations/api-server$ /guides/host-the-http-api-yourself permanent;
+    rewrite ^/integrations/cli$ /how-to-use/cli permanent;
+    rewrite ^/integrations/serverless$ /guides/host-the-http-api-yourself permanent;
+    rewrite ^/faq$ /introduction permanent;
+    rewrite ^/docs$ /introduction permanent;
+    rewrite ^/docs/installation$ /how-to-use/js-library permanent;
+    rewrite ^/docs/http-api$ /how-to-use/http-api permanent;
+    rewrite ^/docs/options$ /how-to-use/js-library permanent;
 
     index index.html;
     try_files $uri/index.html $uri.html $uri/ $uri =404;
