@@ -12,7 +12,7 @@ export default defineConfigWithTheme<ThemeOptions>({
   title: 'DiceBear',
   description:
     'With DiceBear you can create awesome avatars for your project in no time.',
-  cleanUrls: 'with-subfolders',
+  cleanUrls: true,
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   transformHead: (ctx) => {
     const result: HeadConfig[] = [];
