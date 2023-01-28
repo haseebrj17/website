@@ -60,7 +60,7 @@ const styles = computed(() => {
       </li>
       <li>
         <VPLink class="link" href="https://dicebear.betteruptime.com/">
-          API Status
+          Status
         </VPLink>
       </li>
       <li>
