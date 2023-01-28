@@ -23,6 +23,9 @@
 
 .VPLink {
   &[href^='/styles/'] {
+    display: flex;
+    align-items: center;
+
     &::before {
       content: '';
       display: inline-block;
