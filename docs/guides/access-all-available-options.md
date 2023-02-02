@@ -18,8 +18,8 @@ const options = {
 console.log(options);
 ```
 
-Also for this documentation or the CLI we evaluate this JSON schema to show all
-available options.
+Also for this documentation and the CLI, we are parsing this JSON schema to show
+all the available options.
 
 Example:
 https://github.com/dicebear/dicebear/blob/main/packages/dicebear/src/utils/getOptionsBySchema.ts
