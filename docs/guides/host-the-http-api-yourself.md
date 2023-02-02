@@ -131,6 +131,10 @@ Enable the version 5.1 endpoint. Defaults to `1` (true).
 
 Enable the version 5.2 endpoint. Defaults to `1` (true).
 
+### ENABLE_VERSION_5_3
+
+Enable the version 5.3 endpoint. Defaults to `1` (true).
+
 ### CACHE_CONTROL_AVATARS
 
 Cache duration for the avatars endpoint in seconds. Defaults to `31536000` (1

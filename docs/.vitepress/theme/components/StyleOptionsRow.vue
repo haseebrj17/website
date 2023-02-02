@@ -222,6 +222,12 @@ const touchless = { left: () => {}, right: () => {} };
     number between the two values, which will be used as offset.
   </p>
 
+  <p v-if="name === 'randomizeIds'">
+    This option randomize the IDs in the generated SVG / XML. This can be useful
+    for example if the avatars are included directly in the HTML and you want to
+    avoid ID collisions.
+  </p>
+
   <v-card class="row-card" variant="flat">
     <v-tabs v-model="valueTab" bg-color="secondary">
       <v-tab value="examples" v-if="examples !== undefined">Examples</v-tab>

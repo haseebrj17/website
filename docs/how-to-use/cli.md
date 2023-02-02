@@ -126,6 +126,8 @@ Commands:
   dicebear personas [outputPath]           Generate "personas" avatar(s)
   dicebear pixelArt [outputPath]           Generate "pixelArt" avatar(s)
   dicebear pixelArtNeutral [outputPath]    Generate "pixelArtNeutral" avatar(s)
+  dicebear shapes [outputPath]             Generate "shapes" avatar(s)
+  dicebear thumbs [outputPath]             Generate "thumbs" avatar(s)
 
 Options:
   --version  Show version number                                       [boolean]
