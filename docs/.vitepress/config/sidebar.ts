@@ -30,7 +30,7 @@ const sidebar: DefaultTheme.SidebarGroup[] = [
     collapsible: true,
     items: [
       {
-        text: 'How to programmatically access all available options of an avatar style?',
+        text: 'Programmatically access all available options of an avatar style',
         link: '/guides/access-all-available-options',
       },
       {
