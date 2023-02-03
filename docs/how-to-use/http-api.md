@@ -108,8 +108,8 @@ second to 50. We also ask you to use the API only for non-commercial purposes.
 If you want to use the API for commercial purposes or need more requests per
 second, please [set up your own instance](/guides/host-the-http-api-yourself).
 
-We are happy to answer any questions you may have. Just open an discussion on
-[GitHub](https://github.com/dicebear/dicebear).
+We are happy to answer any questions you may have. Just open an
+[discussion](https://github.com/orgs/dicebear/discussions) on GitHub.
 
 ## Changes and Availability
 

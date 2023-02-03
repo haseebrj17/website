@@ -81,6 +81,10 @@ const sidebar: DefaultTheme.SidebarGroup[] = [
         text: 'Use the library with Vue',
         link: '/guides/use-the-library-with-vue',
       },
+      {
+        text: 'How many unique avatars are possible per avatar style?',
+        link: '/guides/how-many-unique-avatars',
+      },
     ],
   },
 ];
