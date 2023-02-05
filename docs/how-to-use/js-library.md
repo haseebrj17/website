@@ -193,7 +193,7 @@ const avatar = createAvatar(lorelei, {
   // ... options
 });
 
-const arrayBuffer = await avatar.toArrayBuffer('avatar.svg'); // [!code focus]
+const arrayBuffer = await avatar.toArrayBuffer(); // [!code focus]
 ```
 
 ### `.png(options)` {#png}
