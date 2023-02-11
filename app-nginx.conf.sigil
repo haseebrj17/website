@@ -38,6 +38,7 @@ http {
     rewrite ^/docs/installation$ /how-to-use/js-library permanent;
     rewrite ^/docs/http-api$ /how-to-use/http-api permanent;
     rewrite ^/docs/options$ /how-to-use/js-library permanent;
+    rewrite ^/legal/legal-notice$ /legal/site-notice permanent;
 
     index index.html;
     try_files $uri/index.html $uri.html $uri/ $uri =404;
