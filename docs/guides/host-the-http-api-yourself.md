@@ -45,7 +45,7 @@ addresses).
 
 ### ENABLE_LOGGER
 
-Enable the logger. Defaults to `1` (true).
+Enable the logger. Defaults to `0` (false).
 
 ### ENABLE_PNG
 
