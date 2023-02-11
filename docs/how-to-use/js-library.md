@@ -232,8 +232,7 @@ In Node.js, additional packages need to be installed for this method:
 npm install @resvg/resvg-js@^2.0.0 sharp@^0.30.4
 ```
 
-For the `includeExif` option, [exiftool](https://exiftool.org/) must be
-installed and an additional package is needed:
+The `includeExif` option requires an additional package:
 
 ```
 npm install exiftool-vendored@^16.3.0
@@ -277,8 +276,7 @@ In Node.js, additional packages need to be installed for this method:
 npm install @resvg/resvg-js@^2.0.0 sharp@^0.30.4
 ```
 
-For the `includeExif` option, [exiftool](https://exiftool.org/) must be
-installed and an additional package is needed:
+The `includeExif` option requires an additional package:
 
 ```
 npm install exiftool-vendored@^16.3.0
