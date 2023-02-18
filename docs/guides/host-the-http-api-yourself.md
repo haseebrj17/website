@@ -59,6 +59,10 @@ The minimum size for the PNG endpoint. Defaults to `1`.
 
 The maximum size for the PNG endpoint. Defaults to `256`.
 
+### PNG_SIZE_DEFAULT
+
+The default size for the PNG endpoint. Defaults to `256`.
+
 ### ENABLE_PNG_EXIF
 
 Enable EXIF data for the PNG endpoint. Defaults to `1` (true).
@@ -80,6 +84,10 @@ The minimum size for the JPEG endpoint. Defaults to `1`.
 ### JPEG_SIZE_MAX
 
 The maximum size for the JPEG endpoint. Defaults to `256`.
+
+### JPEG_SIZE_DEFAULT
+
+The default size for the JPEG endpoint. Defaults to `256`.
 
 ### ENABLE_JPEG_EXIF
 
