@@ -85,12 +85,12 @@ ${sitemapLinks
     },
     nav: [
       { text: 'Playground', link: '/playground' },
+      { text: 'Editor', link: 'https://editor.dicebear.com' },
       {
         text: 'Documentation',
         link: '/introduction',
-        activeMatch: '^/(introduction|how-to-use|guides)',
+        activeMatch: '^/(introduction|how-to-use|guides|styles)',
       },
-      { text: 'Styles', link: '/styles', activeMatch: '^/styles' },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/dicebear/dicebear' },
