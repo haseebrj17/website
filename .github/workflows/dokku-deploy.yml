@@ -6,10 +6,6 @@ on:
     branches:
       - 'main'
 
-env:
-  DOKKU_REMOTE_URL: 'ssh://dokku@pull.dicebear.com:22/docs'
-  CDN_PULL_ZONE: 147563
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,8 +19,8 @@ jobs:
       - name: Push to dokku
         uses: dokku/github-action@master
         with:
-          git_remote_url: ${{ env.DOKKU_REMOTE_URL }}
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          git_remote_url: ${{ env.DOKKU_REMOTE_URL }}/docs
+          ssh_private_key: ${{ secrets.DOKKU_SSH_PRIVATE_KEY }}
 
       - name: Purge CDN Cache
         run: |
