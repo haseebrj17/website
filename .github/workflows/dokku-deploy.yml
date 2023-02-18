@@ -19,11 +19,11 @@ jobs:
       - name: Push to dokku
         uses: dokku/github-action@master
         with:
-          git_remote_url: ${{ env.DOKKU_REMOTE_URL }}/docs
+          git_remote_url: ${{ vars.DOKKU_REMOTE_URL }}/docs
           ssh_private_key: ${{ secrets.DOKKU_SSH_PRIVATE_KEY }}
 
       - name: Purge CDN Cache
         run: |
           curl --request POST \
-            --url https://api.bunny.net/pullzone/${{ env.CDN_PULL_ZONE }}/purgeCache \
+            --url https://api.bunny.net/pullzone/${{ vars.CDN_PULL_ZONE }}/purgeCache \
             --header 'AccessKey: ${{ secrets.CDN_ACCESS_KEY }}'
