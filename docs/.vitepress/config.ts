@@ -2,7 +2,9 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { defineConfigWithTheme, HeadConfig } from 'vitepress';
 import { ThemeOptions } from '@shared/types';
-import sidebar from './config/sidebar';
+import sidebarDocs from './config/sidebarDocs';
+import sidebarPlayground from './config/sidebarPlayground';
+import sidebarLegal from './config/sidebarLegal';
 import avatarStyles from './config/avatarStyles';
 import vuetify from 'vite-plugin-vuetify';
 
@@ -67,6 +69,10 @@ ${sitemapLinks
           __dirname,
           'shared/utils/body-scroll-lock.ts'
         ),
+        './components/VPLocalNav.vue': path.resolve(
+          __dirname,
+          'theme/components/VPLocalNav.vue'
+        ),
       },
     },
   },
@@ -93,16 +99,12 @@ ${sitemapLinks
       pattern: 'https://github.com/dicebear/website/edit/main/docs/:path',
     },
     sidebar: {
-      '/introduction': sidebar,
-      '/styles': sidebar,
-      '/how-to-use': sidebar,
-      '/guides': sidebar,
-      '/playground': [
-        {
-          text: 'Playground',
-          items: [{ text: 'Playground', link: '/playground' }],
-        },
-      ],
+      '/introduction': sidebarDocs,
+      '/styles': sidebarDocs,
+      '/how-to-use': sidebarDocs,
+      '/guides': sidebarDocs,
+      '/playground': sidebarPlayground,
+      '/legal': sidebarLegal,
     },
   },
   markdown: {},

@@ -2,15 +2,13 @@ import { capitalCase, paramCase } from 'change-case';
 import * as collection from '@dicebear/collection';
 import { DefaultTheme } from 'vitepress';
 
-const sidebar: DefaultTheme.SidebarGroup[] = [
+const sidebar: DefaultTheme.SidebarItem[] = [
   {
     text: 'Introduction',
-    collapsible: true,
     items: [{ text: 'What is DiceBear?', link: '/introduction' }],
   },
   {
     text: 'How to use',
-    collapsible: true,
     items: [
       { text: 'JS-Library', link: '/how-to-use/js-library' },
       { text: 'HTTP-API', link: '/how-to-use/http-api' },
@@ -19,7 +17,6 @@ const sidebar: DefaultTheme.SidebarGroup[] = [
   },
   {
     text: 'Styles',
-    collapsible: true,
     items: Object.keys(collection).map((styleName) => ({
       text: capitalCase(styleName),
       link: `/styles/${paramCase(styleName)}`,
@@ -27,7 +24,6 @@ const sidebar: DefaultTheme.SidebarGroup[] = [
   },
   {
     text: 'Guides',
-    collapsible: true,
     items: [
       {
         text: 'Programmatically access all available options of an avatar style',

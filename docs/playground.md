@@ -2,6 +2,7 @@
 title: Playground
 editLink: false
 aside: false
+sidebarMenuLabel: Options
 
 description: >
   Configure your custom avatar and see how you can use it in your project.
