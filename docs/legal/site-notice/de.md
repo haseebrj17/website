@@ -1,5 +1,6 @@
 ---
-title: Site Notice
+title: Impressum
 editLink: false
 aside: false
+lang: de
 ---
