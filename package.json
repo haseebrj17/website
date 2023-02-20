@@ -31,7 +31,7 @@
     "prando": "^6.0.1",
     "random-int": "^3.0.0",
     "random-item": "^4.0.1",
-    "sass": "^1.57.1",
+    "sass": "^1.58.3",
     "typescript": "~4.8.4",
     "vite-plugin-vuetify": "^1.0.1",
     "vitepress": "1.0.0-alpha.46",
