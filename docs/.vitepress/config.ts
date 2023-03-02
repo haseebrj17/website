@@ -27,7 +27,7 @@ export default defineConfigWithTheme<ThemeOptions>({
 
       result.push([
         'link',
-        { rel: 'canonical', href: `https://dicebear.com/${canonicalPath}` },
+        { rel: 'canonical', href: `https://www.dicebear.com/${canonicalPath}` },
       ]);
     }
 
@@ -45,7 +45,7 @@ export default defineConfigWithTheme<ThemeOptions>({
   buildEnd: ({ outDir }) => {
     const sitemap = `<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapLinks
-  .map((link) => `  <url><loc>https://dicebear.com/${link}</loc></url>`)
+  .map((link) => `  <url><loc>https://www.dicebear.com/${link}</loc></url>`)
   .join('\n')}
 </urlset>`;
 

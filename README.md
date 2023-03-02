@@ -1,7 +1,8 @@
 # dicebear.com
 
-[![preview](./preview.png)](https://dicebear.com)
+[![preview](./preview.png)](https://www.dicebear.com)
 
 ## Contributing
 
-See documentation: https://dicebear.com/guides/contribute-to-the-documentation
+See documentation:
+https://www.dicebear.com/guides/contribute-to-the-documentation
