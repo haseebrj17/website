@@ -97,6 +97,7 @@ ${sitemapLinks
       },
       {
         text: 'Tools',
+        activeMatch: '^/(playground)',
         items: [
           { text: 'Playground', link: '/playground' },
           { text: 'Editor', link: 'https://editor.dicebear.com' },
