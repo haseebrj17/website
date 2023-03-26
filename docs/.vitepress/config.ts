@@ -86,11 +86,9 @@ ${sitemapLinks
     },
     nav: [
       {
-        text: 'Tools',
-        items: [
-          { text: 'Playground', link: '/playground' },
-          { text: 'Editor', link: 'https://editor.dicebear.com' },
-        ],
+        text: 'Documentation',
+        link: '/introduction',
+        activeMatch: '^/(introduction|how-to-use|guides)',
       },
       {
         text: 'Styles',
@@ -98,9 +96,11 @@ ${sitemapLinks
         activeMatch: '^/styles',
       },
       {
-        text: 'Documentation',
-        link: '/introduction',
-        activeMatch: '^/(introduction|how-to-use|guides)',
+        text: 'Tools',
+        items: [
+          { text: 'Playground', link: '/playground' },
+          { text: 'Editor', link: 'https://editor.dicebear.com' },
+        ],
       },
     ],
     socialLinks: [
