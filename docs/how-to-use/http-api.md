@@ -84,9 +84,8 @@ Because the PNG and JPG formats put more load on the API, the size is limited to
 
 ## Versioning
 
-You can set the version in the URL to be guaranteed to have an identical avatar
-even after updates. Just replace the `6.x` from the previous examples with the
-one you want.
+You can set the version in the URL. Just replace the `6.x` from the previous
+examples with the one you want.
 
 | Version | Termination\* |
 | ------- | ------------: |
