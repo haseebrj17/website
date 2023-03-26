@@ -7,7 +7,7 @@ import type {
 } from '@shared/types';
 import { useAvatarStyleDefaults } from '@shared/composables/avatar';
 import { useData } from 'vitepress';
-import { camelCase } from 'lodash';
+import { camelCase } from 'change-case';
 
 export default defineStore('playground', () => {
   const data = useData();
