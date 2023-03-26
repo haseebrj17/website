@@ -23,18 +23,19 @@ are possible! Just use the countless options that each avatar style provides.
 
 And thanks to the [JavaScript library](/how-to-use/js-library),
 [HTTP API](/how-to-use/http-api), [CLI](/how-to-use/cli),
-[Figma plugin](https://www.figma.com/community/plugin/1005765655729342787/DiceBear-Exporter)
-and [Playground](/playground), your next avatar is always just a stone's throw
-away!
+[Figma plugin](https://www.figma.com/community/plugin/1005765655729342787/DiceBear-Exporter),
+[Editor](https://editor.dicebear.com) and [Playground](/playground), your next
+avatar is always just a stone's throw away!
 
 ## How to use?
 
 You are a designer and need avatars for your design? Then check out our
 [Figma Plugin](https://www.figma.com/community/plugin/1005765655729342787/DiceBear-Exporter)
-and [Playground](/playground). As a developer, you could take a look at the
-[HTTP API](/how-to-use/http-api), the [CLI](/how-to-use/cli) or the
-[JS library](/how-to-use/js-library). Which is more appropriate for you, depends
-on the programming language and environment you are using.
+and [Editor](https://editor.dicebear.com). As a developer, you could take a look
+at the [HTTP API](/how-to-use/http-api), the [CLI](/how-to-use/cli), the
+[JS library](/how-to-use/js-library) or the [Playground](/playground). Which is
+more appropriate for you, depends on the programming language and environment
+you are using.
 
 In a JavaScript environment, you could use the JS library or the HTTP API if the
 JS library is too large for you. In other environments you might be interested

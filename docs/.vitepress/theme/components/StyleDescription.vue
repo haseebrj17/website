@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import { useData } from 'vitepress';
 import { ThemeOptions } from '@shared/types';
+import { paramCase } from 'param-case';
 
 const { theme } = useData<ThemeOptions>();
 const props = defineProps<{
@@ -10,6 +11,14 @@ const props = defineProps<{
 
 const style = computed(() => {
   return theme.value.avatarStyles[props.styleName];
+});
+
+const playgroundUrl = computed(() => {
+  return `/playground?style=${paramCase(props.styleName)}`;
+});
+
+const editorUrl = computed(() => {
+  return `https://editor.dicebear.com/?style=${paramCase(props.styleName)}`;
 });
 </script>
 
@@ -44,4 +53,11 @@ const style = computed(() => {
       >. See <a href="#details">details</a> for more information.
     </p>
   </div>
+
+  <v-btn :href="playgroundUrl" color="primary" variant="tonal" class="mr-2">
+    Open in Playground
+  </v-btn>
+  <v-btn :href="editorUrl" target="_blank" color="primary" variant="tonal">
+    Open in Editor
+  </v-btn>
 </template>

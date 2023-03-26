@@ -7,13 +7,23 @@ import type {
 } from '@shared/types';
 import { useAvatarStyleDefaults } from '@shared/composables/avatar';
 import { useData } from 'vitepress';
+import { camelCase } from 'lodash';
 
 export default defineStore('playground', () => {
   const data = useData();
 
-  const avatarStyleName = ref<PlaygroundStoreStyle>(
-    Object.keys(data.theme.value.avatarStyles)[0]
+  const availableAvatarStyles = Object.keys(data.theme.value.avatarStyles);
+
+  let defaultAvatarStyleName = camelCase(
+    new URL(window.location.href).searchParams.get('style') ??
+      availableAvatarStyles[0]
   );
+
+  if (false === availableAvatarStyles.includes(defaultAvatarStyleName)) {
+    defaultAvatarStyleName = availableAvatarStyles[0];
+  }
+
+  const avatarStyleName = ref<PlaygroundStoreStyle>(defaultAvatarStyleName);
 
   const avatarStyleDefaults = useAvatarStyleDefaults(avatarStyleName);
 

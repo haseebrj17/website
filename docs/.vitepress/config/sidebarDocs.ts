@@ -1,5 +1,3 @@
-import { capitalCase, paramCase } from 'change-case';
-import * as collection from '@dicebear/collection';
 import { DefaultTheme } from 'vitepress';
 
 const sidebar: DefaultTheme.SidebarItem[] = [
@@ -14,13 +12,6 @@ const sidebar: DefaultTheme.SidebarItem[] = [
       { text: 'HTTP-API', link: '/how-to-use/http-api' },
       { text: 'CLI', link: '/how-to-use/cli' },
     ],
-  },
-  {
-    text: 'Styles',
-    items: Object.keys(collection).map((styleName) => ({
-      text: capitalCase(styleName),
-      link: `/styles/${paramCase(styleName)}`,
-    })),
   },
   {
     text: 'Guides',

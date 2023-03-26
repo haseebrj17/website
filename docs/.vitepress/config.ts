@@ -5,6 +5,7 @@ import { ThemeOptions } from '@shared/types';
 import sidebarDocs from './config/sidebarDocs';
 import sidebarPlayground from './config/sidebarPlayground';
 import sidebarLegal from './config/sidebarLegal';
+import sidebarStyles from './config/sidebarStyles';
 import avatarStyles from './config/avatarStyles';
 import vuetify from 'vite-plugin-vuetify';
 
@@ -84,12 +85,22 @@ ${sitemapLinks
       light: '/logo.svg',
     },
     nav: [
-      { text: 'Playground', link: '/playground' },
-      { text: 'Editor', link: 'https://editor.dicebear.com' },
+      {
+        text: 'Tools',
+        items: [
+          { text: 'Playground', link: '/playground' },
+          { text: 'Editor', link: 'https://editor.dicebear.com' },
+        ],
+      },
+      {
+        text: 'Styles',
+        link: '/styles',
+        activeMatch: '^/styles',
+      },
       {
         text: 'Documentation',
         link: '/introduction',
-        activeMatch: '^/(introduction|how-to-use|guides|styles)',
+        activeMatch: '^/(introduction|how-to-use|guides)',
       },
     ],
     socialLinks: [
@@ -100,7 +111,7 @@ ${sitemapLinks
     },
     sidebar: {
       '/introduction': sidebarDocs,
-      '/styles': sidebarDocs,
+      '/styles': sidebarStyles,
       '/how-to-use': sidebarDocs,
       '/guides': sidebarDocs,
       '/playground': sidebarPlayground,
