@@ -54,7 +54,13 @@ const editorUrl = computed(() => {
     </p>
   </div>
 
-  <v-btn :href="playgroundUrl" color="primary" variant="tonal" class="mr-2">
+  <v-btn
+    :href="playgroundUrl"
+    target="_blank"
+    color="primary"
+    variant="tonal"
+    class="mr-2"
+  >
     Open in Playground
   </v-btn>
   <v-btn :href="editorUrl" target="_blank" color="primary" variant="tonal">
