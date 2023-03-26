@@ -21,13 +21,13 @@ Use the following address and replace `<styleName>` with your preferred avatar
 style (camelCase). Every official [avatar style](/styles) is supported.
 
 ```
-https://api.dicebear.com/5.x/<styleName>/svg
+https://api.dicebear.com/6.x/<styleName>/svg
 ```
 
 ### A few examples
 
-<BrowserPreview url="https://api.dicebear.com/5.x/pixel-art/svg" />
-<BrowserPreview url="https://api.dicebear.com/5.x/lorelei/svg" />
+<BrowserPreview url="https://api.dicebear.com/6.x/pixel-art/svg" />
+<BrowserPreview url="https://api.dicebear.com/6.x/lorelei/svg" />
 
 :::info
 
@@ -44,8 +44,8 @@ Options can be passed via the
 [query string](https://en.wikipedia.org/wiki/Query_string). For example, you can
 set a seed like this:
 
-<BrowserPreview url="https://api.dicebear.com/5.x/pixel-art/svg?seed=John" />
-<BrowserPreview url="https://api.dicebear.com/5.x/pixel-art/svg?seed=Jane" />
+<BrowserPreview url="https://api.dicebear.com/6.x/pixel-art/svg?seed=John" />
+<BrowserPreview url="https://api.dicebear.com/6.x/pixel-art/svg?seed=Jane" />
 
 :::tip
 
@@ -61,15 +61,15 @@ if you want to provide the PRNG with several hair styles in addition to the
 seed. Note that the avatar styles provide different options. In this example, we
 use the [Pixel Art](/styles/pixel-art) avatar style.
 
-<BrowserPreview url="https://api.dicebear.com/5.x/pixel-art/svg?seed=John&hair=short01,short02,short03,short04,short05" />
-<BrowserPreview url="https://api.dicebear.com/5.x/pixel-art/svg?seed=Jane&hair=long01,long02,long03,long04,long05" />
+<BrowserPreview url="https://api.dicebear.com/6.x/pixel-art/svg?seed=John&hair=short01,short02,short03,short04,short05" />
+<BrowserPreview url="https://api.dicebear.com/6.x/pixel-art/svg?seed=Jane&hair=long01,long02,long03,long04,long05" />
 
 ### Boolean options
 
 Boolean values can be set as strings (`true` and `false`).
 
-<BrowserPreview url="https://api.dicebear.com/5.x/lorelei/svg?flip=true" />
-<BrowserPreview url="https://api.dicebear.com/5.x/lorelei/svg?flip=false" />
+<BrowserPreview url="https://api.dicebear.com/6.x/lorelei/svg?flip=true" />
+<BrowserPreview url="https://api.dicebear.com/6.x/lorelei/svg?flip=false" />
 
 ## File format
 
@@ -78,25 +78,38 @@ SVG is the more modern format, scales indefinitely, and requires less traffic.
 Because the PNG and JPG formats put more load on the API, the size is limited to
 256x256.
 
-<BrowserPreview url="https://api.dicebear.com/5.x/bottts/svg" />
-<BrowserPreview url="https://api.dicebear.com/5.x/bottts/png" />
-<BrowserPreview url="https://api.dicebear.com/5.x/bottts/jpg" />
+<BrowserPreview url="https://api.dicebear.com/6.x/bottts/svg" />
+<BrowserPreview url="https://api.dicebear.com/6.x/bottts/png" />
+<BrowserPreview url="https://api.dicebear.com/6.x/bottts/jpg" />
 
 ## Versioning
 
 You can set the version in the URL to be guaranteed to have an identical avatar
-even after updates. Just replace the `5.x` from the previous examples with the
-one you want. Currently supported: `5.x`, `5.3`, `5.2`, `5.1`, `5.0`, `4.x`,
-`4.10`, `4.9`, `4.8`, `4.7`, `4.6`, `4.5` and `4.4`.
+even after updates. Just replace the `6.x` from the previous examples with the
+one you want.
 
-<BrowserPreview url="https://api.dicebear.com/5.0/bottts/svg" />
-<BrowserPreview url="https://api.dicebear.com/4.10/bottts/svg" />
-<BrowserPreview url="https://api.dicebear.com/4.4/bottts/svg" />
+| Version | Termination\* |
+| ------- | ------------: |
+| 6.x     |             - |
+| 5.x     |             - |
+| 5.3     |     July 2024 |
+| 5.2     |     July 2024 |
+| 5.1     |     July 2024 |
+| 5.0     |     July 2024 |
+| 4.x     | December 2023 |
+| 4.10    | December 2023 |
+| 4.9     | December 2023 |
+| 4.8     | December 2023 |
+| 4.7     | December 2023 |
+| 4.6     | December 2023 |
+| 4.5     | December 2023 |
+| 4.4     | December 2023 |
 
-:::warning
+::: warning
 
-The `4.*` versions will be discontinued at the end of 2023. You can set up your
-own instance of the API to still access versions 4.\* afterwards.
+\* This is the expected end of support. We reserve the right to discontinue any
+version at any time without notice. You can create your own own instance of the
+API to be able to access discontinued versions even afterwards.
 
 :::
 
@@ -115,6 +128,7 @@ We are happy to answer any questions you may have. Just open an
 
 Please be aware that we reserve the right to update the API at any time. While
 we will do our best to maintain backwards compatibility, we cannot guarantee
-this. Additionally, we cannot guarantee that the API will always be available.
-If you need consistent access to the API, we recommend setting up
-[your own instance](/guides/host-the-http-api-yourself).
+this. Even though we try to always return the same avatar, the design and
+especially the source code may change. Additionally, we cannot guarantee that
+the API will always be available. If you need consistent access to the API, we
+recommend setting up [your own instance](/guides/host-the-http-api-yourself).

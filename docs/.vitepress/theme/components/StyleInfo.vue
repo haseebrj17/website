@@ -16,7 +16,7 @@ const style = computed(() => {
 });
 
 const exampleHttpApiUrl = computed(() => {
-  return `https://api.dicebear.com/5.x/${paramCase(props.styleName)}/svg`;
+  return `https://api.dicebear.com/6.x/${paramCase(props.styleName)}/svg`;
 });
 
 const exampleCollectionImport = computed(() => {

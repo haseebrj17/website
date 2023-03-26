@@ -22,7 +22,7 @@ const options = Object.keys(data.theme.value.avatarStyles)
     <v-col :cols="12">
       <v-label class="mb-2" for="avatarStyle">
         Avatar Style
-        <v-badge content="+20" inline></v-badge>
+        <v-badge content="+25" inline></v-badge>
       </v-label>
       <v-select
         id="avatarStyle"

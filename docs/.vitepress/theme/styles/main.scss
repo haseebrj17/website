@@ -4,7 +4,8 @@
   font-weight: 500 !important;
 }
 
-.v-field__prepend-inner, .v-field__append-inner {
+.v-field__prepend-inner,
+.v-field__append-inner {
   padding: 0 6px 0 0;
   display: flex;
   align-items: center;
@@ -58,6 +59,8 @@
     'lorelei-neutral',
     'micah',
     'miniavs',
+    'notionists',
+    'notionists-neutral',
     'open-peeps',
     'personas',
     'pixel-art',
@@ -68,7 +71,7 @@
 
   @each $style in $styles {
     &[href='/styles/#{$style}']::before {
-      background-image: url('https://api.dicebear.com/5.x/#{$style}/svg?seed=JD');
+      background-image: url('https://api.dicebear.com/6.x/#{$style}/svg?seed=JD');
     }
   }
 }

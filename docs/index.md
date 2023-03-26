@@ -23,7 +23,7 @@ hero:
       link: /introduction
 features:
   - icon: 🥳
-    title: More than 20 avatar styles!
+    title: More than 25 avatar styles!
     details:
       Among our avatar styles you're sure to find one that perfectly fits to you
       and your project.
