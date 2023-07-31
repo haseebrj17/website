@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ClientOnly from './components/ClientOnly.vue';
+import ClientOnly from '@theme/components/ClientOnly.vue';
 import Loader from './components/Loader.vue';
 import Preview from './components/Preview.vue';
 import { all as catNames } from 'cat-names';

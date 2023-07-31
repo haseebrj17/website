@@ -7,7 +7,6 @@ import { useAvatarStyleSchema } from '@shared/composables/avatar';
 import { storeToRefs } from 'pinia';
 import SidebarAvatarOption from './SidebarAvatarOption.vue';
 import { paramCase } from 'change-case';
-import ClientOnly from './ClientOnly.vue';
 
 const store = useStore();
 const { avatarStyleName } = storeToRefs(store);
@@ -35,28 +34,26 @@ const properties = computed(() => {
 
 <template>
   <div class="sidebar">
-    <ClientOnly>
-      <v-row>
-        <v-col :cols="12">
-          <SidebarAvatarStyle />
-        </v-col>
-        <v-col
-          :cols="12"
-          v-for="(property, field) in properties"
-          class="sidebar-col"
+    <v-row>
+      <v-col :cols="12">
+        <SidebarAvatarStyle />
+      </v-col>
+      <v-col
+        :cols="12"
+        v-for="(property, field) in properties"
+        class="sidebar-col"
+      >
+        <SidebarAvatarOption :field="field" :schema="property" />
+      </v-col>
+      <v-col :cols="12">
+        <v-btn
+          block
+          variant="tonal"
+          :href="`/styles/${paramCase(store.avatarStyleName)}#options`"
+          >More options</v-btn
         >
-          <SidebarAvatarOption :field="field" :schema="property" />
-        </v-col>
-        <v-col :cols="12">
-          <v-btn
-            block
-            variant="tonal"
-            :href="`/styles/${paramCase(store.avatarStyleName)}#options`"
-            >More options</v-btn
-          >
-        </v-col>
-      </v-row>
-    </ClientOnly>
+      </v-col>
+    </v-row>
   </div>
 </template>
 

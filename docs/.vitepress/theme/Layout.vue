@@ -2,7 +2,6 @@
 import 'vuetify/styles';
 import DefaultTheme from 'vitepress/theme';
 import Footer from './components/Footer.vue';
-import Sponsors from './components/Sponsors.vue';
 import SidebarBefore from './components/SidebarBefore.vue';
 import { watchEffect } from 'vue';
 import { useData } from 'vitepress';
@@ -28,9 +27,6 @@ watchEffect(() => {
       </template>
       <template #layout-bottom>
         <Footer />
-      </template>
-      <template #aside-ads-before>
-        <Sponsors />
       </template>
       <template #home-hero-image>
         <ClientOnly>

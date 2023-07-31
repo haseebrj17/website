@@ -2,6 +2,7 @@
 description: >
   Get an overview of all available avatar styles from DiceBear. From abstract
   patterns, to loving characters, it's all there!
+aside: false
 ---
 
 <script setup lang="ts">

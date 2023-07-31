@@ -2,6 +2,7 @@
 import { useRoute } from 'vitepress';
 import { computed, ref, watch } from 'vue';
 import PlaygroundSidebar from '@playground/components/Sidebar.vue';
+import ClientOnly from './ClientOnly.vue';
 
 const route = useRoute();
 
@@ -22,7 +23,11 @@ watch(
 <template>
   <div ref="marker"></div>
   <div v-if="isPlayground" class="sidebar-playground">
-    <PlaygroundSidebar />
+    <ClientOnly>
+      <form autoComplete="off" @submit.prevent>
+        <PlaygroundSidebar />
+      </form>
+    </ClientOnly>
   </div>
 </template>
 

@@ -1,4 +1,3 @@
-import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { defineConfigWithTheme, HeadConfig } from 'vitepress';
 import { ThemeOptions } from '@shared/types';
@@ -8,8 +7,6 @@ import sidebarLegal from './config/sidebarLegal';
 import sidebarStyles from './config/sidebarStyles';
 import avatarStyles from './config/avatarStyles';
 import vuetify from 'vite-plugin-vuetify';
-
-const sitemapLinks: string[] = [];
 
 export default defineConfigWithTheme<ThemeOptions>({
   title: 'DiceBear',
@@ -33,24 +30,6 @@ export default defineConfigWithTheme<ThemeOptions>({
     }
 
     return result;
-  },
-  transformHtml: (_, id, { pageData }) => {
-    if (id.endsWith('404.html')) {
-      return;
-    }
-
-    sitemapLinks.push(
-      pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2')
-    );
-  },
-  buildEnd: ({ outDir }) => {
-    const sitemap = `<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapLinks
-  .map((link) => `  <url><loc>https://www.dicebear.com/${link}</loc></url>`)
-  .join('\n')}
-</urlset>`;
-
-    fs.writeFileSync(path.resolve(outDir, 'sitemap.xml'), sitemap);
   },
   vite: {
     plugins: [
@@ -84,6 +63,7 @@ ${sitemapLinks
       dark: '/logo-dark.svg',
       light: '/logo.svg',
     },
+    externalLinkIcon: true,
     nav: [
       {
         text: 'Documentation',
@@ -118,6 +98,9 @@ ${sitemapLinks
       '/playground': sidebarPlayground,
       '/legal': sidebarLegal,
     },
+  },
+  sitemap: {
+    hostname: 'https://www.dicebear.com',
   },
   markdown: {},
 });

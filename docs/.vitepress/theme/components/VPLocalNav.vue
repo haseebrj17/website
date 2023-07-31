@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { useData } from 'vitepress';
-// @ts-ignore
-import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar';
+import { useSidebar } from 'vitepress/theme';
 // @ts-ignore
 import VPIconAlignLeft from 'vitepress/dist/client/theme-default/components/icons/VPIconAlignLeft.vue';
 
