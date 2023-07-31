@@ -6,26 +6,26 @@ curl \
   -H "Accept: application/vnd.github.raw" \
   -H "Authorization: Bearer ${PAT}"\
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/repos/dicebear/legal/contents/en/site-notice.md \
+  https://api.github.com/repos/dicebear/legal/docs/legal/site-notice.md \
   > docs/legal/site-notice.md
 
 curl \
   -H "Accept: application/vnd.github.raw" \
   -H "Authorization: Bearer ${PAT}"\
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/repos/dicebear/legal/contents/en/privacy-policy.md \
+  https://api.github.com/repos/dicebear/docs/legal/privacy-policy.md \
   > docs/legal/privacy-policy.md
 
 curl \
   -H "Accept: application/vnd.github.raw" \
   -H "Authorization: Bearer ${PAT}"\
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/repos/dicebear/legal/contents/de/site-notice.md \
+  https://api.github.com/repos/dicebear/legal/docs/legal/de/site-notice.md \
   > docs/legal/site-notice/de.md
 
 curl \
   -H "Accept: application/vnd.github.raw" \
   -H "Authorization: Bearer ${PAT}"\
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/repos/dicebear/legal/contents/de/privacy-policy.md \
+  https://api.github.com/repos/dicebear/docs/legal/de/privacy-policy.md \
   > docs/legal/privacy-policy/de.md
