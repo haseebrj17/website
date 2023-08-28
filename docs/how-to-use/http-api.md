@@ -90,6 +90,7 @@ examples with the one you want.
 | Version | Termination\* |
 | ------- | ------------: |
 | 7.x     |             - |
+| 6.x     |             - |
 | 5.x     |             - |
 | 5.3     |     July 2024 |
 | 5.2     |     July 2024 |
