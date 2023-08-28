@@ -16,7 +16,13 @@ const style = computed(() => {
 });
 
 const exampleHttpApiUrl = computed(() => {
-  return `https://api.dicebear.com/6.x/${paramCase(props.styleName)}/svg`;
+  return `https://api.dicebear.com/7.x/${paramCase(props.styleName)}/svg`;
+});
+
+const schemaJsonHttpApiUrl = computed(() => {
+  return `https://api.dicebear.com/7.x/${paramCase(
+    props.styleName
+  )}/schema.json`;
 });
 
 const exampleCollectionImport = computed(() => {
@@ -73,6 +79,25 @@ const exampleCliCommand = computed(() => {
             ref="noopener noreferrer"
           >
             {{ exampleHttpApiUrl }}
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="https://json-schema.org/"
+            target="_blank"
+            rel="nnoopener noreferrer"
+            >JSON Schema</a
+          >
+        </td>
+        <td>
+          <a
+            :href="schemaJsonHttpApiUrl"
+            target="_blank"
+            ref="noopener noreferrer"
+          >
+            {{ schemaJsonHttpApiUrl }}
           </a>
         </td>
       </tr>

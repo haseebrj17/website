@@ -15,6 +15,10 @@ const styles = computed(() => {
   const knownWork: string[] = [];
 
   for (const val of Object.values(theme.value.avatarStyles)) {
+    if (val.meta.creator === 'Florian Körner') {
+      continue;
+    }
+
     if (val.meta.source) {
       if (knownWork.includes(val.meta.source)) {
         continue;

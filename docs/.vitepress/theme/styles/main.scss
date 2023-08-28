@@ -65,13 +65,14 @@
     'personas',
     'pixel-art',
     'pixel-art-neutral',
+    'rings',
     'shapes',
     'thumbs'
   );
 
   @each $style in $styles {
     &[href='/styles/#{$style}']::before {
-      background-image: url('https://api.dicebear.com/6.x/#{$style}/svg?seed=JD');
+      background-image: url('https://api.dicebear.com/7.x/#{$style}/svg?seed=JD');
     }
   }
 }
