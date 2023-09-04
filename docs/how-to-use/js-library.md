@@ -71,7 +71,7 @@ Some licenses require attribution. For a quick overview we have created an
 
 ### `createAvatar(style, options)`
 
-**Return type:** Object with [.toString()](#tostring),
+**Return type:** Object with [.toString()](#tostring), [.toJson()](#tojson),
 [.toDataUri()](#todatauri), [.toFile(name)](#tofile),
 [.toArrayBuffer()](#toarraybuffer), [.png(options)](#png) and
 [.jpg(options)](#jpg) methods.
