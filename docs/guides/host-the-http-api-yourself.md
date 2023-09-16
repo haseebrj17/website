@@ -10,8 +10,7 @@ uses the [Fastify](https://www.fastify.io/) framework.
 ## With docker
 
 The easiest way to host the HTTP API yourself is to use the docker image. You
-can find the image on
-[GitHub](https://github.com/dicebear/api/pkgs/container/api).
+can find the image on [Docker Hub](https://hub.docker.com/r/dicebear/api).
 
 ```
 docker run -ti -p 3000:3000 dicebear/api:latest
