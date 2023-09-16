@@ -14,7 +14,7 @@ can find the image on
 [GitHub](https://github.com/dicebear/api/pkgs/container/api).
 
 ```
-docker run -ti -p 3000:3000 ghcr.io/dicebear/api:latest
+docker run -ti -p 3000:3000 dicebear/api:latest
 ```
 
 ## Without docker
